@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #eb3b5a;
-  --text-color: #ffffff;
+  --secondary-color: #ffffff;
 }
 
 * {
@@ -44,7 +44,7 @@ body {
 
 #nav a.router-link-active.router-link-exact-active {
   background: var(--primary-color);
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 h1 {
@@ -53,16 +53,56 @@ h1 {
 }
 
 .jobs {
-  width: 90vw;
-  text-align: center;
   margin: 0.4rem;
-  background: var(--primary-color);
   width: 90%;
+  height: 3.4rem;
   border-radius: 0.3rem;
+  transition: 0.6s;
+  background: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobs:hover {
+  background: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+}
+
+a {
+  transition: 0.6s;
 }
 
 .jobs a,
-.job a:visited {
-  color: var(--text-color);
+.jobs a:visited {
+  color: var(--secondary-color);
   text-decoration: none;
+  vertical-align: middle;
+}
+
+.jobs a:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+@media only screen and (min-width: 600px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+
+  .jobs {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  html,
+  body {
+    font-size: 24px;
+  }
+  .jobs {
+    max-width: 800px;
+  }
 }

@@ -34,6 +34,18 @@ export default {
           details:
             "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
         },
+        {
+          title: "Helpdesk Engineer",
+          id: 4,
+          details:
+            "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
+        },
+        {
+          title: "IT Administrator",
+          id: 5,
+          details:
+            "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
+        },
       ],
     };
   },
