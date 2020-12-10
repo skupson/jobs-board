@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Jobs from "../views/jobs/Jobs.vue";
 import JobsDetails from "../views/jobs/JobsDetails.vue";
+import "../assets/css/style.css";
 
 const routes = [
   {
@@ -24,6 +25,7 @@ const routes = [
     path: "/jobs/:id",
     name: "JobsDetails",
     component: JobsDetails,
+    props: true,
   },
 ];
 

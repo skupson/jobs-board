@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #eb3b5a;
+  --text-color: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  font-family: "Padauk", sans-serif;
+  font-size: 16px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav {
+  width: 18rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#nav a,
+#nav a:visited {
+  text-decoration: none;
+  width: 25%;
+  text-align: center;
+  border-radius: 0.3rem;
+  color: var(--primary-color);
+}
+
+#nav a.router-link-active.router-link-exact-active {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+h1 {
+  margin-top: 1.4rem;
+  font-size: 1.8rem;
+}
+
+.jobs {
+  width: 90vw;
+  text-align: center;
+  margin: 0.4rem;
+  background: var(--primary-color);
+  width: 90%;
+  border-radius: 0.3rem;
+}
+
+.jobs a,
+.job a:visited {
+  color: var(--text-color);
+  text-decoration: none;
+}

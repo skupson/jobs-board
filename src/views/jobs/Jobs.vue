@@ -1,7 +1,13 @@
 <template>
-  <div v-for="job in jobs" v-bind:key="job.id">
-    <h2>{{ job.title }}</h2>
-    <p>{{ job.details }}</p>
+  <h1>Job Offers</h1>
+  <div class="jobs" v-for="job in jobs" v-bind:key="job.id">
+    <router-link
+      v-bind:to="{
+        name: 'JobsDetails',
+        params: { id: job.id, title: job.title },
+      }"
+      ><h2>{{ job.title }}</h2></router-link
+    >
   </div>
 </template>
 
