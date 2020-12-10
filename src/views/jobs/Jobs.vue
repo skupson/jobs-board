@@ -4,7 +4,7 @@
     <router-link
       v-bind:to="{
         name: 'JobsDetails',
-        params: { id: job.id, title: job.title },
+        params: { id: job.id },
       }"
       ><h2>{{ job.title }}</h2></router-link
     >
@@ -15,39 +15,14 @@
 export default {
   data() {
     return {
-      jobs: [
-        {
-          title: "UX Designer",
-          id: 1,
-          details:
-            "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
-        },
-        {
-          title: "Web Developer",
-          id: 2,
-          details:
-            "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
-        },
-        {
-          title: "DevOps Engineer",
-          id: 3,
-          details:
-            "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
-        },
-        {
-          title: "Helpdesk Engineer",
-          id: 4,
-          details:
-            "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
-        },
-        {
-          title: "IT Administrator",
-          id: 5,
-          details:
-            "orem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum mauris quam. ",
-        },
-      ],
+      jobs: [],
     };
+  },
+  mounted() {
+    fetch("http://localhost:3000/jobs")
+      .then((res) => res.json())
+      .then((data) => (this.jobs = data))
+      .catch((err) => console.log("Error getting the data"));
   },
 };
 </script>
